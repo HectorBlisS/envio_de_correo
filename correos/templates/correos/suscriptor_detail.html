@@ -1,0 +1,14 @@
+<h2>{{suscriptor.nombre}}</h2>
+<p>Correo: {{suscriptor.email}}</p>
+
+<a href="{%url 'correos:edit' suscriptor.id%}">
+<button>Editar</button>
+</a>
+
+<a href="{%url 'correos:delete' suscriptor.id%}">
+<button>Borrar</button>
+</a>
+
+<a href="{%url 'correos:list'%}">
+<button>Volver</button>
+</a>

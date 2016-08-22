@@ -1,0 +1,9 @@
+<form method="post">
+{%csrf_token%}
+<h3>Estas seguro de que quieres joder este correo?</h3>
+<p>{{object}}</p>
+<input type="submit" value="Simon!">
+</form>
+<a href="{%url 'correos:detail' object.id%}">
+<button>Cancelar</button>
+</a>

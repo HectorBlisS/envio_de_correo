@@ -1,0 +1,16 @@
+<h1>Bienvenido al super sistema Spamer de FixterCamp!</h1>
+<h3>A quien vamos a spamear hoy?</h3>
+<form action="." method="post">
+{%csrf_token%}
+
+<input name="asunto" type="text" placeholder="Asunto del correo">
+<br>
+<textarea name="mensaje" placeholder="El mensaje del correo"></textarea>
+<br>
+<label>
+	Destinatarios:
+	<textarea name="victims">{%for correo in correos%}{{correo.email}},{%endfor%}</textarea>
+</label>
+<br>
+<input type="submit" value="Spamear!">
+</form>
